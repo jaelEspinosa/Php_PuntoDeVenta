@@ -1,0 +1,9 @@
+CRITICAL - 2023-06-07 21:47:23 --> Invalid file: "unidades/eliminados.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('unidades/eliminados.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('unidades/eliminados', [], true)
+ 3 APPPATH\Controllers\Unidades.php(79): view('unidades/eliminados', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Unidades->getEliminados()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Unidades))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

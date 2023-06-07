@@ -1,0 +1,99 @@
+CRITICAL - 2023-06-05 19:53:16 --> Call to a member function where() on null
+in APPPATH\Controllers\Unidades.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Unidades->getIndex()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Unidades))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 21:05:08 --> Call to a member function where() on null
+in APPPATH\Controllers\Unidades.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Unidades->getIndex()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Unidades))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 21:05:35 --> Call to a member function where() on null
+in APPPATH\Controllers\Unidades.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Unidades->getIndex()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Unidades))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 21:11:20 --> Call to a member function where() on null
+in APPPATH\Controllers\Unidades.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Unidades->getIndex()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Unidades))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 21:12:23 --> Call to a member function where() on null
+in APPPATH\Controllers\Unidades.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Unidades->getIndex()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Unidades))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 21:14:41 --> Call to a member function where() on null
+in APPPATH\Controllers\Unidades.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Unidades->getIndex()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Unidades))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 21:15:35 --> Undefined variable $datos
+in APPPATH\Views\unidades\unidades.php on line 5.
+ 1 APPPATH\Views\unidades\unidades.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datos', 'C:\\xampp\\htdocs\\pos\\app\\Views\\unidades\\unidades.php', 5)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\pos\\app\\Views\\unidades\\unidades.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('unidades/unidades', [], true)
+ 5 APPPATH\Controllers\Unidades.php(27): view('unidades/unidades')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Unidades->getIndex()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Unidades))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 21:16:05 --> Undefined variable $datos
+in APPPATH\Views\unidades\unidades.php on line 5.
+ 1 APPPATH\Views\unidades\unidades.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datos', 'C:\\xampp\\htdocs\\pos\\app\\Views\\unidades\\unidades.php', 5)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\pos\\app\\Views\\unidades\\unidades.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('unidades/unidades', [], true)
+ 5 APPPATH\Controllers\Unidades.php(27): view('unidades/unidades')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Unidades->getIndex()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Unidades))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 21:17:33 --> Undefined variable $datos
+in APPPATH\Views\unidades\unidades.php on line 49.
+ 1 APPPATH\Views\unidades\unidades.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datos', 'C:\\xampp\\htdocs\\pos\\app\\Views\\unidades\\unidades.php', 49)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\pos\\app\\Views\\unidades\\unidades.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('unidades/unidades', [], true)
+ 5 APPPATH\Controllers\Unidades.php(26): view('unidades/unidades')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Unidades->getIndex()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Unidades))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 21:18:10 --> Call to a member function where() on null
+in APPPATH\Controllers\Unidades.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Unidades->getIndex()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Unidades))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 21:18:59 --> Call to a member function where() on null
+in APPPATH\Controllers\Unidades.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Unidades->getIndex()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Unidades))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 21:31:53 --> Call to a member function where() on null
+in APPPATH\Controllers\Unidades.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Unidades->getIndex()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Unidades))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 21:39:16 --> Call to a member function where() on null
+in APPPATH\Controllers\Unidades.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Unidades->getIndex()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Unidades))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 21:47:07 --> Call to a member function where() on null
+in APPPATH\Controllers\Unidades.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Unidades->getIndex()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Unidades))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

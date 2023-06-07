@@ -1,0 +1,42 @@
+CRITICAL - 2023-06-06 19:08:48 --> Call to a member function where() on null
+in APPPATH\Controllers\Unidades.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Unidades->getIndex()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Unidades))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-06 19:21:53 --> Class "app\Models\UnidadesModel" not found
+in APPPATH\Controllers\Unidades.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Unidades->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-06 19:22:09 --> Class "app\Models\UnidadesModel" not found
+in APPPATH\Controllers\Unidades.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Unidades->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-06 19:24:58 --> Class "app\Models\UnidadesModel" not found
+in APPPATH\Controllers\Unidades.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Unidades->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-06 19:27:12 --> Class "app\Models\UnidadesModel" not found
+in APPPATH\Controllers\Unidades.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Unidades->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-06 19:29:20 --> Class "app\Models\UnidadesModel" not found
+in APPPATH\Controllers\Unidades.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Unidades->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-06 19:32:41 --> Class "app\Models\UnidadesModel" not found
+in APPPATH\Controllers\Unidades.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Unidades->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

@@ -7,9 +7,9 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>POS - CDP</title>
-        <link href="css/style.min.css" rel="stylesheet" />
-        <link href="css/styles.css" rel="stylesheet" />
-        <script src="js/all.js" crossorigin="anonymous"></script>
+        <link href="<?php echo base_url()?>css/style.min.css" rel="stylesheet" />
+        <link href="<?php echo base_url()?>css/styles.css" rel="stylesheet" />
+        <script src="<?php echo base_url()?>js/all.js" crossorigin="anonymous"></script>
     </head>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
@@ -45,7 +45,7 @@
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="layout-static.html">Productos</a>
-                                    <a class="nav-link" href="layout-sidenav-light.html">Unidades</a>
+                                    <a class="nav-link" href="<?php echo base_url(); ?>unidades">Unidades</a>
                                     <a class="nav-link" href="layout-sidenav-light.html">Categorias</a>
                                 </nav>
                             </div>
