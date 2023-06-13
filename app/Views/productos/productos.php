@@ -8,8 +8,8 @@
 
                         <div>
                             <p>
-                               
-                                <a href="<?php echo base_url()?>unidades" class="btn btn-info btn-sm">Unidades</a>
+                                <a href="<?php echo base_url()?>productos/nuevo" class="btn btn-info btn-sm">Agregar</a>
+                                <a href="<?php echo base_url()?>productos/eliminados" class="btn btn-warning btn-sm">Eliminados</a>
                             </p>
                         </div>
                         
@@ -24,8 +24,10 @@
                                     <thead>
                                         <tr>
                                             <th>Id</th>
+                                            <th>Código</th>
                                             <th>Nombre</th>
-                                            <th>N_Corto</th>
+                                            <th>Precio</th>
+                                            <th>Existencias</th>
                                             <th>Acc.</th>
                                             
                                          
@@ -36,15 +38,22 @@
                                        <?php foreach($datos as $dato) { ?>
                                         <tr>
                                             <td><?php echo $dato['id']?></td>
+                                            <td><?php echo $dato['codigo']?></td>
                                             <td><?php echo $dato['nombre']?></td>
-                                            <td><?php echo $dato['nombre_corto']?></td>
+                                            <td><?php echo $dato['precio_venta']?></td>
+                                            <td><?php echo $dato['existencias']?></td>
                                             <td><?php $dato['id']?>
                                             <div class="d-flex justify-content-evenly">
-                                                <a  href="#" data-href="<?php echo base_url()?>/unidades/restaurar/<?php echo $dato['id']?>" class="btn btn-info btn-sm" data-bs-toggle="modal"
-                                                   data-bs-target="#modal-confirma" data-placement="top" title="Restaurar registro" class="btn btn-danger btn-sm">
-                                                <i class="fa-solid fa-trash-arrow-up"></i> Restaurar
+                                                <a href="<?php echo base_url()?>/productos/editar/<?php echo $dato['id']?>" class="btn btn-info btn-sm">
+                                                <i class="fas fa-pencil-alt"></i>
                                                 </a>
-                                                
+                                                <a href="#" data-href="<?php echo base_url()?>/productos/eliminar/<?php echo $dato['id']?>" data-bs-toggle="modal"
+                                                   data-bs-target="#modal-confirma" data-placement="top" title="Eliminar registro" class="btn btn-danger btn-sm">
+                                                <i class="fas fa-trash"></i>
+                                                </a>
+                                               <!--  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-confirma">
+                                                        Launch demo modal
+                                                        </button> -->
                                             </div>
                                             </td>
                                            
@@ -60,20 +69,23 @@
                 </main>
 
 
-                <!-- Modal -->
+
+
+
+<!-- Modal -->
 <div class="modal fade" id="modal-confirma" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
-    <div class="modal-content ">
+    <div class="modal-content bg-danger">
       <div class="modal-header">
-        <h5 class="modal-title text-gray" id="exampleModalLabel">RESTAURAR</h5>
+        <h5 class="modal-title text-white" id="exampleModalLabel">ELIMINAR</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-      <p class="text-gray">Desea restaurar el registro?</p>  
+      <p class="text-white">Desea Eliminar?</p>  
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancelar</button>
-        <a class="btn btn-warning btn-ok">Restaurar</a>
+        <a class="btn btn-warning btn-ok">Eliminar</a>
       </div>
     </div>
   </div>

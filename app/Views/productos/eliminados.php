@@ -9,7 +9,7 @@
                         <div>
                             <p>
                                
-                                <a href="<?php echo base_url()?>unidades" class="btn btn-info btn-sm">Unidades</a>
+                                <a href="<?php echo base_url()?>productos" class="btn btn-info btn-sm">Productos</a>
                             </p>
                         </div>
                         
@@ -22,10 +22,12 @@
                             <div class="card-body">
                                 <table id="datatablesSimple">
                                     <thead>
-                                        <tr>
+                                    <tr>
                                             <th>Id</th>
+                                            <th>Código</th>
                                             <th>Nombre</th>
-                                            <th>N_Corto</th>
+                                            <th>Precio</th>
+                                            <th>Existencias</th>
                                             <th>Acc.</th>
                                             
                                          
@@ -36,11 +38,13 @@
                                        <?php foreach($datos as $dato) { ?>
                                         <tr>
                                             <td><?php echo $dato['id']?></td>
+                                            <td><?php echo $dato['codigo']?></td>
                                             <td><?php echo $dato['nombre']?></td>
-                                            <td><?php echo $dato['nombre_corto']?></td>
+                                            <td><?php echo $dato['precio_venta']?></td>
+                                            <td><?php echo $dato['existencias']?></td>
                                             <td><?php $dato['id']?>
                                             <div class="d-flex justify-content-evenly">
-                                                <a  href="#" data-href="<?php echo base_url()?>/unidades/restaurar/<?php echo $dato['id']?>" class="btn btn-info btn-sm" data-bs-toggle="modal"
+                                                <a  href="#" data-href="<?php echo base_url()?>/productos/restaurar/<?php echo $dato['id']?>" class="btn btn-info btn-sm" data-bs-toggle="modal"
                                                    data-bs-target="#modal-confirma" data-placement="top" title="Restaurar registro" class="btn btn-danger btn-sm">
                                                 <i class="fa-solid fa-trash-arrow-up"></i> Restaurar
                                                 </a>

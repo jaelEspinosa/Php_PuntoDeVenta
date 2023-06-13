@@ -1,0 +1,55 @@
+CRITICAL - 2023-06-13 19:27:01 --> Undefined variable $unidades
+in APPPATH\Views\productos\nuevo.php on line 37.
+ 1 APPPATH\Views\productos\nuevo.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $unidades', 'C:\\xampp\\htdocs\\pos\\app\\Views\\productos\\nuevo.php', 37)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\pos\\app\\Views\\productos\\nuevo.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('productos/nuevo', [], true)
+ 5 APPPATH\Controllers\Productos.php(72): view('productos/nuevo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos->postInsertar()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 19:28:10 --> Undefined variable $unidades
+in APPPATH\Views\productos\nuevo.php on line 37.
+ 1 APPPATH\Views\productos\nuevo.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $unidades', 'C:\\xampp\\htdocs\\pos\\app\\Views\\productos\\nuevo.php', 37)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\pos\\app\\Views\\productos\\nuevo.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('productos/nuevo', [], true)
+ 5 APPPATH\Controllers\Productos.php(72): view('productos/nuevo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos->postInsertar()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 20:51:50 --> Undefined array key "nombre_corto"
+in APPPATH\Views\productos\editar.php on line 18.
+ 1 APPPATH\Views\productos\editar.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre_corto"', 'C:\\xampp\\htdocs\\pos\\app\\Views\\productos\\editar.php', 18)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\pos\\app\\Views\\productos\\editar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('productos/editar', [], true)
+ 5 APPPATH\Controllers\Productos.php(89): view('productos/editar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos->getEditar('4')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 21:23:16 --> Undefined array key "nombre_corto"
+in APPPATH\Views\productos\eliminados.php on line 40.
+ 1 APPPATH\Views\productos\eliminados.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre_corto"', 'C:\\xampp\\htdocs\\pos\\app\\Views\\productos\\eliminados.php', 40)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\pos\\app\\Views\\productos\\eliminados.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('productos/eliminados', [], true)
+ 5 APPPATH\Controllers\Productos.php(130): view('productos/eliminados', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos->getEliminados()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 21:26:07 --> Undefined array key "nombre_corto"
+in APPPATH\Views\productos\eliminados.php on line 40.
+ 1 APPPATH\Views\productos\eliminados.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre_corto"', 'C:\\xampp\\htdocs\\pos\\app\\Views\\productos\\eliminados.php', 40)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\pos\\app\\Views\\productos\\eliminados.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('productos/eliminados', [], true)
+ 5 APPPATH\Controllers\Productos.php(130): view('productos/eliminados', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos->getEliminados()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
