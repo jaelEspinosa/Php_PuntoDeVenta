@@ -73,8 +73,8 @@
                         <div class="col-12 col-sm-2">
                             <label for="inventariable" class="mb-2">Invetariable</label>
                             <select class="form-select" name="inventariable" id="inventariable">
-                                <option value="1">Si</option>
-                                <option value="0">No</option>
+                                <option value="1" <?php echo  $datos['inventariable'] == 1 ? 'selected' : '' ?> >Si</option>
+                                <option value="0" <?php echo  $datos['inventariable'] == 0 ? 'selected' : '' ?> >No</option>
                             </select>
                         </div>
 

@@ -7,9 +7,8 @@
                         <h4 class="mt-4"><?php echo $titulo; ?></h4>
 
                         <div>
-                            <p>
-                               
-                                <a href="<?php echo base_url()?>productos" class="btn btn-info btn-sm">Productos</a>
+                            <p>                               
+                                <a href="<?php echo base_url()?>clientes" class="btn btn-info btn-sm">Clientes</a>
                             </p>
                         </div>
                         
@@ -24,10 +23,10 @@
                                     <thead>
                                     <tr>
                                             <th>Id</th>
-                                            <th>Código</th>
                                             <th>Nombre</th>
-                                            <th>Precio</th>
-                                            <th>Existencias</th>
+                                            <th>Email</th>
+                                            <th>Dirección</th>
+                                            <th>Teléfono</th>
                                             <th>Acc.</th>                                           
                                          
                                         </tr>
@@ -37,13 +36,13 @@
                                        <?php foreach($datos as $dato) { ?>
                                         <tr>
                                             <td><?php echo $dato['id']?></td>
-                                            <td><?php echo $dato['codigo']?></td>
                                             <td><?php echo $dato['nombre']?></td>
-                                            <td><?php echo $dato['precio_venta']?></td>
-                                            <td><?php echo $dato['existencias']?></td>
+                                            <td><?php echo $dato['email']?></td>
+                                            <td><?php echo $dato['direccion']?></td>
+                                            <td><?php echo $dato['telefono']?></td>
                                             <td><?php $dato['id']?>
                                             <div class="d-flex justify-content-evenly">
-                                                <a  href="#" data-href="<?php echo base_url()?>/productos/restaurar/<?php echo $dato['id']?>" class="btn btn-info btn-sm" data-bs-toggle="modal"
+                                                <a  href="#" data-href="<?php echo base_url()?>/clientes/restaurar/<?php echo $dato['id']?>" class="btn btn-info btn-sm" data-bs-toggle="modal"
                                                    data-bs-target="#modal-confirma" data-placement="top" title="Restaurar registro" class="btn btn-danger btn-sm">
                                                 <i class="fa-solid fa-trash-arrow-up"></i> Restaurar
                                                 </a>
