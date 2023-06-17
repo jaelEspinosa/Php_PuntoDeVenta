@@ -9,11 +9,23 @@
  
  {
     protected $categorias;
+    protected $reglas;
 
     public function __construct()
 
     {        
        $this->categorias = new CategoriasModel();
+
+       helper(['form']);
+
+       $this -> reglas = [
+        'nombre' => [
+        'rules' => 'required',
+        'errors' => [
+          'required' => 'El {field}, es obligatorio'
+        ]
+        ]           
+      ];
 
     }
 
@@ -40,15 +52,28 @@
     public function postInsertar()
     
     {
-      $this->categorias->save(['nombre' => $this->request->getpost('nombre')]);
-      return redirect()->to(base_url().'categorias');
+      if($this->request->getMethod() == 'post' && $this->validate($this->reglas)){
+        $this->categorias->save(['nombre' => $this->request->getpost('nombre')]);
+        return redirect()->to(base_url().'categorias');
+      }else{
+        $data = ['titulo' => 'Categorias', 'validation' => $this->validator];
+
+        echo view('header');
+        echo view('categorias/nuevo', $data);
+        echo view('footer');
+      }
     }
+        
 
 
-    public function getEditar($id){
+    public function getEditar($id, $valid = null){
 
         $unidad = $this->categorias->where('id', $id)->first();
-        $data = ['titulo' => 'Editar Unidad', 'datos' => $unidad];
+        if($valid!=null){
+          $data = ['titulo' => 'Editar Unidad', 'datos' => $unidad, 'validation' => $valid];
+        }else{
+          $data = ['titulo' => 'Editar Unidad', 'datos' => $unidad];
+        }
 
         echo view('header');
         echo view('categorias/editar', $data);
@@ -59,8 +84,12 @@
     public function postActualizar()
     
     {
+      if($this->request->getMethod() == 'post' && $this->validate($this->reglas)){
       $this->categorias->update($this->request->getPost('id'),['nombre' => $this->request->getpost('nombre') ]);
       return redirect()->to(base_url().'categorias');
+      }else{
+        return $this -> getEditar($this->request->getPost('id'), $this->validator);
+      }
     }
 
    public function getEliminar($id){

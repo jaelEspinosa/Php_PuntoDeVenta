@@ -1,0 +1,22 @@
+CRITICAL - 2023-06-16 16:07:59 --> Object of class CodeIgniter\Validation\Validation could not be converted to string
+in APPPATH\Views\unidades\nuevo.php on line 14.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('unidades/nuevo', [], true)
+ 4 APPPATH\Controllers\Unidades.php(58): view('unidades/nuevo', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Unidades->postInsertar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Unidades))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-16 16:19:09 --> "field" is not a valid Validation template.
+in SYSTEMPATH\Validation\Validation.php on line 574.
+ 1 SYSTEMPATH\Validation\Validation.php(574): CodeIgniter\Validation\Exceptions\ValidationException::forInvalidTemplate('field')
+ 2 APPPATH\Views\unidades\nuevo.php(12): CodeIgniter\Validation\Validation->listErrors('field')
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\pos\\app\\Views\\unidades\\nuevo.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('unidades/nuevo', [], true)
+ 6 APPPATH\Controllers\Unidades.php(74): view('unidades/nuevo', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Unidades->postInsertar()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Unidades))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

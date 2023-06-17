@@ -13,7 +13,8 @@
     protected $productos;
     protected $unidades;
     protected $categorias;
-
+    protected $reglas;
+    protected $reglasEdit;
 
 
     public function __construct()
@@ -22,6 +23,105 @@
        $this->productos = new ProductosModel();
        $this->unidades = new UnidadesModel();
        $this->categorias = new CategoriasModel();
+
+       helper(['form']);
+
+       $this -> reglas = [
+        'codigo' => [
+        'rules' => 'required|is_unique[productos.codigo]',
+        'errors' => [
+          'required' => 'El {field}, es obligatorio.',
+          'is_unique' => 'El {field}, ya está en uso.'
+        ]
+        ],
+        'nombre' => [
+          'rules' => 'required',
+          'errors' => [
+            'required' => 'El {field}, es obligatorio'
+          ]
+        ],
+        'id_unidad' => [
+          'rules' => 'required',
+          'errors' => [
+            'required' => 'El tipo de unidad, es obligatorio'
+          ]
+        ],
+        'id_categoria' => [
+          'rules' => 'required',
+          'errors' => [
+            'required' => 'El tipo de categoria, es obligatorio'
+          ]
+        ],
+        'precio_venta' => [
+          'rules' => 'required',
+          'errors' => [
+            'required' => 'El precio de venta, es obligatorio'
+          ]
+        ],
+        'precio_compra' => [
+          'rules' => 'required',
+          'errors' => [
+            'required' => 'El el precio de compra, es obligatorio'
+          ]
+        ],
+        'stock_minimo' => [
+          'rules' => 'required',
+          'errors' => [
+            'required' => 'El stock mínimo, es obligatorio'
+          ]
+        ],
+      
+      
+      
+      ];
+      $this -> reglasEdit = [
+        'codigo' => [
+        'rules' => 'required',
+        'errors' => [
+          'required' => 'El {field}, es obligatorio.'
+          
+        ]
+        ],
+        'nombre' => [
+          'rules' => 'required',
+          'errors' => [
+            'required' => 'El {field}, es obligatorio'
+          ]
+        ],
+        'id_unidad' => [
+          'rules' => 'required',
+          'errors' => [
+            'required' => 'El tipo de unidad, es obligatorio'
+          ]
+        ],
+        'id_categoria' => [
+          'rules' => 'required',
+          'errors' => [
+            'required' => 'El tipo de categoria, es obligatorio'
+          ]
+        ],
+        'precio_venta' => [
+          'rules' => 'required',
+          'errors' => [
+            'required' => 'El precio de venta, es obligatorio'
+          ]
+        ],
+        'precio_compra' => [
+          'rules' => 'required',
+          'errors' => [
+            'required' => 'El el precio de compra, es obligatorio'
+          ]
+        ],
+        'stock_minimo' => [
+          'rules' => 'required',
+          'errors' => [
+            'required' => 'El stock mínimo, es obligatorio'
+          ]
+        ],
+      
+      
+      
+      ];
 
     }
 
@@ -50,7 +150,7 @@
     public function postInsertar()
     
     {
-      if($this->request->getMethod() == 'post' && $this->validate(['nombre' => 'required'])){
+      if($this->request->getMethod() == 'post' && $this->validate($this->reglas)){
         
         $this->productos->save(['codigo' => $this->request->getpost('codigo'),
                                 'nombre' => $this->request->getpost('nombre'),
@@ -65,8 +165,11 @@
         return redirect()->to(base_url().'productos');
 
       } else {
+        $categorias = $this->categorias->where('activo', 1)->findAll();
+        $unidades = $this->unidades->where('activo', 1)->findAll();
+        $data = ['titulo' => 'Agregar Producto', 'unidades' => $unidades, 'categorias' => $categorias, 'validation' => $this->validator];
 
-        $data = ['titulo' => 'Agregar Unidad', 'validation' => $this->validator];
+       
 
         echo view('header');
         echo view('productos/nuevo', $data);
@@ -77,13 +180,19 @@
     }
 
 
-    public function getEditar($id){
+    public function getEditar($id, $valid = null){
 
       $categorias = $this->categorias->where('activo', 1)->findAll();
       $unidades = $this->unidades->where('activo', 1)->findAll();
-
         $producto = $this->productos->where('id', $id)->first();
-        $data = ['titulo' => 'Editar Producto', 'datos' => $producto, 'categorias' => $categorias, 'unidades'=>$unidades ];
+
+        if($valid!=null){
+          $data = ['titulo' => 'Editar Producto', 'datos' => $producto, 'categorias' => $categorias, 'unidades'=>$unidades, 'validation' => $valid ];
+        }else{
+          $data = ['titulo' => 'Editar Producto', 'datos' => $producto, 'categorias' => $categorias, 'unidades'=>$unidades ];
+        }
+
+
 
         echo view('header');
         echo view('productos/editar', $data);
@@ -93,6 +202,7 @@
 
     public function postActualizar()    
          {
+            if($this->request->getMethod() == 'post' && $this->validate($this->reglasEdit)){
               $this->productos->update($this->request->getPost('id'),[
                                               'codigo' => $this->request->getpost('codigo'),
                                               'nombre' => $this->request->getpost('nombre'),
@@ -104,6 +214,9 @@
                                               'inventariable' => $this->request->getpost('inventariable'),
             ]);
               return redirect()->to(base_url().'productos');
+          }else{
+            return $this -> getEditar($this->request->getPost('id'), $this->validator);
+          }
          }
 
    

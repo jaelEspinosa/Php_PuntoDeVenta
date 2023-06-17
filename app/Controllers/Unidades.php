@@ -9,11 +9,32 @@
  
  {
     protected $unidades;
+    protected $reglas;
 
     public function __construct()
 
     {        
        $this->unidades = new UnidadesModel();
+
+       helper(['form']);
+
+       $this -> reglas = [
+        'nombre' => [
+        'rules' => 'required',
+        'errors' => [
+          'required' => 'El {field}, es obligatorio'
+        ]
+        ],
+        'nombre_corto' => [
+          'rules' => 'required',
+          'errors' => [
+            'required' => 'El {field}, es obligatorio'
+          ]
+          ],
+      
+      
+      
+      ];
 
     }
 
@@ -40,7 +61,7 @@
     public function postInsertar()
     
     {
-      if($this->request->getMethod() == 'post' && $this->validate(['nombre' => 'required', 'nombre_corto' => 'required'])){
+      if($this->request->getMethod() == 'post' && $this->validate($this->reglas)){
         
         $this->unidades->save(['nombre' => $this->request->getpost('nombre'),'nombre_corto' => $this->request->getpost('nombre_corto') ]);
         return redirect()->to(base_url().'unidades');
@@ -58,10 +79,15 @@
     }
 
 
-    public function getEditar($id){
+    public function getEditar($id, $valid = null){
 
         $unidad = $this->unidades->where('id', $id)->first();
-        $data = ['titulo' => 'Editar Unidad', 'datos' => $unidad];
+
+        if( $valid != null ){
+          $data = ['titulo' => 'Editar Unidad', 'datos' => $unidad, 'validation' => $valid];
+        }else{
+          $data = ['titulo' => 'Editar Unidad', 'datos' => $unidad];
+        }
 
         echo view('header');
         echo view('unidades/editar', $data);
@@ -69,11 +95,14 @@
 
     }
 
-    public function postActualizar()
-    
-    {
+    public function postActualizar(){
+
+      if($this->request->getMethod() == 'post' && $this->validate($this->reglas)){
       $this->unidades->update($this->request->getPost('id'),['nombre' => $this->request->getpost('nombre'),'nombre_corto' => $this->request->getpost('nombre_corto') ]);
       return redirect()->to(base_url().'unidades');
+      }else{
+        return $this -> getEditar($this->request->getPost('id'), $this->validator);
+      }
     }
 
    public function getEliminar($id){

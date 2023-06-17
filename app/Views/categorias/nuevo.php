@@ -5,6 +5,15 @@
                 <main>
                     <div class="container-fluid px-4">
                         <h4 class="mt-4"><?php echo $titulo; ?></h4> 
+
+                        <!-- validacion -->
+                        <?php if (isset($validation)){?>
+                           <div class="alert alert-danger">
+                               <?php echo $validation->listErrors();?>   
+                                      
+                            </div> 
+                        <?php }?>
+                        <!-- validacion -->
                         <form action="<?php echo base_url()?>categorias/insertar" method="POST" autocomplete="off">
                         <div class="form-group">
                             <div  style="margin-top: 50px;" class="row">

@@ -2,8 +2,14 @@
 <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h4 class="mt-4"><?php echo $titulo; ?></h4>                   
-                      
+                        <h4 class="mt-4"><?php echo $titulo; ?></h4>          
+                                 
+                        <?php if (isset($validation)){?>
+                           <div class="alert alert-danger">
+                               <?php echo $validation->listErrors();?>   
+                                      
+                            </div> 
+                        <?php }?>
 
                         <form action="<?php echo base_url()?>unidades/actualizar" method="POST" autocomplete="off">
                         <div class="form-group">

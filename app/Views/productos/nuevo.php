@@ -5,23 +5,28 @@
                 <main>
                     <div class="container-fluid px-4">
                         <h4 class="mt-4"><?php echo $titulo; ?></h4>   
-                        <?php \Config\Services::validation()->listErrors()?>                
-                      
+
+                        <!-- validacion -->
+                        <?php if (isset($validation)){?>
+                           <div class="alert alert-danger">
+                               <?php echo $validation->listErrors();?>   
+                                      
+                            </div> 
+                        <?php }?>              
+                      <!-- validacion  -->
 
                         <form action="<?php echo base_url()?>productos/insertar" method="POST" autocomplete="off">
-                        <?php csrf_field()?>
-
-                        
+                                         
 
                         <div class="form-group">
                             <div  style="margin-top: 50px;" class="row">
                                 <div class="col-12 col-sm-6">
                                     <label for="codigo" class="mb-2">Código</label>
-                                    <input type="text" class="form-control" id="codigo" name="codigo" placeholder="Código"  autofocus required>
+                                    <input type="text" class="form-control" id="codigo" name="codigo" placeholder="Código"  value="<?php echo set_value('codigo')?>"autofocus >
                                 </div>
                                 <div class="col-12 col-sm-6">
                                     <label for="nombre" class="mb-2">Nombre</label>
-                                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre"  required >
+                                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre"  value="<?php echo set_value('nombre')?>" >
                                 </div>
                                
                             </div>
@@ -32,7 +37,7 @@
                                
                                 <div class="col-12 col-sm-6">
                                     <label for="id_unidad" class="mb-2">Seleccione Unidad</label>
-                                    <select class="form-select" id="id_unidad" name="id_unidad" required>
+                                    <select class="form-select" id="id_unidad" name="id_unidad" value="<?php echo set_value('id_unidad')?>">
                                         <option class="text-gray" value="">--</option>
                                         <?php foreach($unidades as $unidad){?>
                                             <option value="<?php echo $unidad['id']?>"><?php echo $unidad['nombre']?></option>
@@ -43,7 +48,7 @@
                                 <div class="col-12 col-sm-6">
                                     <label for="id_categoria" class="mb-2">Seleccione Categoria</label>
                                    
-                                    <select class="form-select" id="id_categoria" name="id_categoria" required>
+                                    <select class="form-select" id="id_categoria" name="id_categoria" value="<?php echo set_value('id_categoria')?>">
                                         <option value="">--</option>
                                         <?php foreach($categorias as $categoria){?>
                                             <option value="<?php echo $categoria['id']?>"><?php echo $categoria['nombre']?></option>
@@ -58,11 +63,11 @@
                             <div  style="margin-top: 50px;" class="row">
                                 <div class="col-12 col-sm-6">
                                     <label for="precio_venta" class="mb-2">Precio de Venta</label>
-                                    <input type="text" class="form-control" id="precio_venta" name="precio_venta" placeholder="precio de venta"  required >
+                                    <input type="text" class="form-control" id="precio_venta" name="precio_venta" placeholder="precio de venta"  value="<?php echo set_value('precio_venta')?>" >
                                 </div>
                                 <div class="col-12 col-sm-6">
                                     <label for="precio_compra" class="mb-2">Precio de Compra</label>
-                                    <input type="text" class="form-control" id="precio_compra" name="precio_compra" placeholder="precio de compra"  required >
+                                    <input type="text" class="form-control" id="precio_compra" name="precio_compra" placeholder="precio de compra"  value="<?php echo set_value('precio_compra')?>" >
                                 </div>
                                
                             </div>
@@ -72,7 +77,7 @@
                                 
                                 <div class="col-12 col-sm-6">
                                     <label for="stock_minimo" class="mb-2">Stock mínimo</label>
-                                    <input type="number" class="form-control" id="stock_minimo" name="stock_minimo" placeholder="stock mínimo"  required >
+                                    <input type="number" class="form-control" id="stock_minimo" name="stock_minimo" placeholder="stock mínimo"  value="<?php echo set_value('stock_minimo')?>" >
                                 </div>
                                 <div class="col-12 col-sm-2">
                                     <label for="inventariable" class="mb-2">Invetariable</label>
