@@ -45,7 +45,7 @@ use App\Models\ClientesModel;
     public function postInsertar()
     
     {
-      if($this->request->getMethod() == 'post' && $this->validate(['nombre' => 'required'])){
+      if($this->request->is('post')  && $this->validate(['nombre' => 'required'])){
         
         $this->clientes->save([
                                 'nombre' => $this->request->getpost('nombre'),

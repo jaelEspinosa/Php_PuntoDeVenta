@@ -61,8 +61,8 @@
     public function postInsertar()
     
     {
-      if($this->request->getMethod() == 'post' && $this->validate($this->reglas)){
-        
+      if($this->request->is('post') && $this->validate($this->reglas)){
+        /* if($this->request->getMethod() == 'post' && $this->validate($this->reglas)){ */
         $this->unidades->save(['nombre' => $this->request->getpost('nombre'),'nombre_corto' => $this->request->getpost('nombre_corto') ]);
         return redirect()->to(base_url().'unidades');
 
@@ -97,7 +97,7 @@
 
     public function postActualizar(){
 
-      if($this->request->getMethod() == 'post' && $this->validate($this->reglas)){
+      if($this->request->is('post')  && $this->validate($this->reglas)){
       $this->unidades->update($this->request->getPost('id'),['nombre' => $this->request->getpost('nombre'),'nombre_corto' => $this->request->getpost('nombre_corto') ]);
       return redirect()->to(base_url().'unidades');
       }else{

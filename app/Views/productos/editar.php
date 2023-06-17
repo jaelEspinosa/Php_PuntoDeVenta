@@ -22,11 +22,11 @@
                     <div style="margin-top: 50px;" class="row">
                         <div class="col-12 col-sm-6">
                             <label for="codigo" class="mb-2">Código</label>
-                            <input type="text" class="form-control" id="codigo" name="codigo" placeholder="Código" value="<?php echo $datos['codigo'] ?>" autofocus >
+                            <input type="text" class="form-control" id="codigo" name="codigo" placeholder="Código" value="<?php echo $datos['codigo'] ?>" disabled >
                         </div>
                         <div class="col-12 col-sm-6">
                             <label for="nombre" class="mb-2">Nombre</label>
-                            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" value="<?php echo $datos['nombre'] ?>" >
+                            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" value="<?php echo $datos['nombre'] ?>" autofocus >
                         </div>
 
                     </div>

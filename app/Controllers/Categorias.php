@@ -52,7 +52,7 @@
     public function postInsertar()
     
     {
-      if($this->request->getMethod() == 'post' && $this->validate($this->reglas)){
+      if($this->request->is('post')  && $this->validate($this->reglas)){
         $this->categorias->save(['nombre' => $this->request->getpost('nombre')]);
         return redirect()->to(base_url().'categorias');
       }else{
@@ -84,7 +84,7 @@
     public function postActualizar()
     
     {
-      if($this->request->getMethod() == 'post' && $this->validate($this->reglas)){
+      if($this->request->is('post')  && $this->validate($this->reglas)){
       $this->categorias->update($this->request->getPost('id'),['nombre' => $this->request->getpost('nombre') ]);
       return redirect()->to(base_url().'categorias');
       }else{

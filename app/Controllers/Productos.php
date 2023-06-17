@@ -150,7 +150,7 @@
     public function postInsertar()
     
     {
-      if($this->request->getMethod() == 'post' && $this->validate($this->reglas)){
+      if($this->request->is('post')  && $this->validate($this->reglas)){
         
         $this->productos->save(['codigo' => $this->request->getpost('codigo'),
                                 'nombre' => $this->request->getpost('nombre'),
@@ -202,7 +202,7 @@
 
     public function postActualizar()    
          {
-            if($this->request->getMethod() == 'post' && $this->validate($this->reglasEdit)){
+            if($this->request->is('post')  && $this->validate($this->reglasEdit)){
               $this->productos->update($this->request->getPost('id'),[
                                               'codigo' => $this->request->getpost('codigo'),
                                               'nombre' => $this->request->getpost('nombre'),
