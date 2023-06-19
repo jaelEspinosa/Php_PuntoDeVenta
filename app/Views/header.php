@@ -63,6 +63,9 @@
                             <div class="collapse" id="collapseAdmin" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav accordion bg-secondary m-2 rounded">
                                     <a class="nav-link" href="<?php echo base_url(); ?>configuracion">Configuración</a>
+                                    <a class="nav-link" href="<?php echo base_url(); ?>roles">Roles</a>
+                                    <a class="nav-link" href="<?php echo base_url(); ?>cajas">Cajas</a>
+                                    <a class="nav-link" href="<?php echo base_url(); ?>usuarios">Usuarios</a>
                                  
                                 </nav>
                             </div>
