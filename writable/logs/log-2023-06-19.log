@@ -1,0 +1,22 @@
+CRITICAL - 2023-06-19 14:32:04 --> Undefined property: CodeIgniter\View\View::$configuracion
+in APPPATH\Views\header.php on line 9.
+ 1 APPPATH\Views\header.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$configuracion', 'C:\\xampp\\htdocs\\pos\\app\\Views\\header.php', 9)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\pos\\app\\Views\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('header', [], true)
+ 5 APPPATH\Controllers\Configuracion.php(59): view('header')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Configuracion->getIndex()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Configuracion))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 14:32:07 --> Undefined property: CodeIgniter\View\View::$configuracion
+in APPPATH\Views\header.php on line 9.
+ 1 APPPATH\Views\header.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$configuracion', 'C:\\xampp\\htdocs\\pos\\app\\Views\\header.php', 9)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\pos\\app\\Views\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('header', [], true)
+ 5 APPPATH\Controllers\Clientes.php(61): view('header')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Clientes->getIndex()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clientes))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

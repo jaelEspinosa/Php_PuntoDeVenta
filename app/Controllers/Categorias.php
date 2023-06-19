@@ -41,7 +41,7 @@
     
     public function getNuevo(){
 
-        $data = ['titulo' => 'Agregar Unidad'];
+        $data = ['titulo' => 'Agregar Categoria'];
 
         echo view('header');
         echo view('categorias/nuevo', $data);

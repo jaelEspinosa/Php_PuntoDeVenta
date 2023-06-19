@@ -19,7 +19,7 @@
                             <div  style="margin-top: 50px;" class="row">
                                 <div class="col-12 col-sm-6">
                                     <label for="nombre" class="mb-2">Nombre</label>
-                                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre"  autofocus require>
+                                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre"  autofocus >
                                 </div>
                              </div>
                         </div>

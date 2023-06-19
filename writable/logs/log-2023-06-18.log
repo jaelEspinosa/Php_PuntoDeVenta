@@ -1,0 +1,54 @@
+CRITICAL - 2023-06-18 14:30:45 --> Undefined variable $datos
+in APPPATH\Views\configuracion\configuracion.php on line 36.
+ 1 APPPATH\Views\configuracion\configuracion.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datos', 'C:\\xampp\\htdocs\\pos\\app\\Views\\configuracion\\configuracion.php', 36)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\pos\\app\\Views\\configuracion\\configuracion.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('configuracion/configuracion', [], true)
+ 5 APPPATH\Controllers\Configuracion.php(47): view('configuracion/configuracion', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Configuracion->getIndex()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Configuracion))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-18 22:10:56 --> Array callback must have exactly two elements
+in APPPATH\Views\configuracion\configuracion.php on line 25.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('configuracion/configuracion', [], true)
+ 4 APPPATH\Controllers\Configuracion.php(60): view('configuracion/configuracion', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Configuracion->getIndex()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Configuracion))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-18 22:33:36 --> mysqli_sql_exception: Unknown column 'fecha_edit' in 'field list' in C:\xampp\htdocs\pos\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\pos\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `configu...', 0)
+#1 C:\xampp\htdocs\pos\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `configu...')
+#2 C:\xampp\htdocs\pos\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `configu...')
+#3 C:\xampp\htdocs\pos\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `configu...', Array, false)
+#4 C:\xampp\htdocs\pos\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\pos\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\xampp\htdocs\pos\system\Model.php(756): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\xampp\htdocs\pos\app\Controllers\Configuracion.php(72): CodeIgniter\Model->update()
+#8 C:\xampp\htdocs\pos\system\CodeIgniter.php(934): App\Controllers\Configuracion->postActualizar()
+#9 C:\xampp\htdocs\pos\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Configuracion))
+#10 C:\xampp\htdocs\pos\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\pos\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-06-18 22:33:37 --> Unknown column 'fecha_edit' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `configuracion` SET `valor` = \'tienda CDP (actualizada)\', `fecha_edit` = \'2023-06-18 22:33:36\'
+WHERE `nombre` IN (\'tienda_nombre\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `configuracion` SET `valor` = \'tienda CDP (actualizada)\', `fecha_edit` = \'2023-06-18 22:33:36\'
+WHERE `nombre` IN (\'tienda_nombre\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `configuracion` SET `valor` = \'tienda CDP (actualizada)\', `fecha_edit` = \'2023-06-18 22:33:36\'
+WHERE `nombre` IN (\'tienda_nombre\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `configuracion` SET `valor` = :valor:, `fecha_edit` = :fecha_edit:
+WHERE `nombre` IN :nombre:', [...], false)
+ 5 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 7 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 8 APPPATH\Controllers\Configuracion.php(72): CodeIgniter\Model->update()
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Configuracion->postActualizar()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Configuracion))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

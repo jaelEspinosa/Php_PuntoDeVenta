@@ -9,6 +9,7 @@ use App\Models\ClientesModel;
  
  {
     protected $clientes;
+    protected $reglas;
  
 
 
@@ -19,12 +20,42 @@ use App\Models\ClientesModel;
        
        $this->clientes = new ClientesModel();
 
+        helper(['form']);
+        
+        $this -> reglas = [
+        
+        'nombre' => [
+          'rules' => 'required',
+          'errors' => [
+            'required' => 'El nombre, es obligatorio'
+          ]
+        ],
+        'email' => [
+          'rules' => 'required|valid_email[clientes.email]',
+          'errors' => [
+            'required' => 'El Email, es obligatorio',
+            'valid_email' => 'El Email no tiene formato válido'
+          ]
+        ],
+        'direccion' => [
+          'rules' => 'required',
+          'errors' => [
+            'required' => 'La dirección, es obligatorio'
+          ]
+        ],
+        'telefono' => [
+          'rules' => 'required',
+          'errors' => [
+            'required' => 'El teléfono, es obligatorio'
+          ]
+        ]  
+      ]; 
+
     }
 
     public function getIndex($activo = 1 )
     {
-        $clientes = $this->clientes->where('activo',$activo)->findAll();
-        
+        $clientes = $this->clientes->where('activo',$activo)->findAll();        
         $data = ['titulo' => 'Clientes', 'datos'=>$clientes];
 
         echo view('header');
@@ -45,7 +76,7 @@ use App\Models\ClientesModel;
     public function postInsertar()
     
     {
-      if($this->request->is('post')  && $this->validate(['nombre' => 'required'])){
+      if($this->request->is('post')  && $this->validate($this->reglas)){
         
         $this->clientes->save([
                                 'nombre' => $this->request->getpost('nombre'),
@@ -70,11 +101,16 @@ use App\Models\ClientesModel;
     }
 
 
-    public function getEditar($id){
+    public function getEditar($id, $valid = null){
 
 
         $cliente = $this->clientes->where('id', $id)->first();
-        $data = ['titulo' => 'Editar Cliente', 'datos' => $cliente];
+
+        if( $valid!= null ){
+          $data = ['titulo' => 'Editar Cliente', 'datos' => $cliente, 'validation' => $valid];
+        }else{
+          $data = ['titulo' => 'Editar Cliente', 'datos' => $cliente];
+        }
 
         echo view('header');
         echo view('clientes/editar', $data);
@@ -84,14 +120,19 @@ use App\Models\ClientesModel;
 
     public function postActualizar()    
          {
-              $this->clientes->update($this->request->getPost('id'),[
-                        'nombre' => $this->request->getpost('nombre'),
-                        'direccion' => $this->request->getpost('direccion'),
-                        'telefono' => $this->request->getpost('telefono'),
-                        'email' => $this->request->getpost('email'),
-                        
-            ]);
-              return redirect()->to(base_url().'clientes');
+             if($this->request->is('post') && $this->validate($this->reglas)){
+
+               $this->clientes->update($this->request->getPost('id'),[
+                         'nombre' => $this->request->getpost('nombre'),
+                         'direccion' => $this->request->getpost('direccion'),
+                         'telefono' => $this->request->getpost('telefono'),
+                         'email' => $this->request->getpost('email'),
+                         
+             ]);
+               return redirect()->to(base_url().'clientes');
+             }else{
+              return $this -> getEditar($this->request->getPost('id'), $this->validator);
+             }
          }
 
    
